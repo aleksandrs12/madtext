@@ -15,7 +15,10 @@ def dio():
         print("if you don't care about range, just write 0 and 0")
         d = [int(input('Please write in the starting number of the range of answers you want to see')), int(input('Please write in the ending number of the range of answers you want to see'))]
         if d[0] == 0 and d[1] == 0:
-            print(dalitaji(num, -num, num))
+            if num > 0:
+                print(dalitaji(num, -num, num))
+            else:
+                print(dalitaji(num, num, -num))
         else:
             if d[0] < d[1]:
                 print(dalitaji(num, d[0], d[1]))
